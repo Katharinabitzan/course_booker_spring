@@ -43,7 +43,7 @@ public class Booking {
     }
 
     public String getDate() {
-        return "The date today is " + date;
+        return date;
     }
 
     public void setDate(String date) {

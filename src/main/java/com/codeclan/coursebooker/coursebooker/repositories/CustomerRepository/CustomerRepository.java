@@ -11,4 +11,8 @@ import java.util.List;
 @RepositoryRestResource(excerptProjection = EmbedCustomer.class)
 public interface CustomerRepository extends JpaRepository<Customer, Long>, CustomerRepositoryCustom {
     List<Customer> getCustomersByCourseId(Long courseId);
+
+    List<Customer> getCustomersByTownAndCourseId(String town, Long courseId);
+
+    List<Customer> getCustomersOverCertainAgeByTownAndCourseId(int age, String town, Long course_id);
 }
